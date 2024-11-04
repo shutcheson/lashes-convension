@@ -1,0 +1,161 @@
+// Variables for colours and fonts
+$primary-color: #007bff;
+$secondary-color: #343a40;
+$text-color: #212529;
+
+body {
+  font-family: "Arial", sans-serif;
+  color: $text-color;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+// Navbar start //
+.navbar {
+  .navbar-brand {
+    font-weight: 700;
+    color: $secondary-color;
+  }
+  .nav-link {
+    color: $text-color;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+// Navbar end //
+
+// Hero start //
+.hero {
+  padding: 120px 0;
+  background-image: url("../img/hero-img.webp");
+  height: 60vh;
+  object-fit: fill;
+
+  h1 {
+    // Adjust these values to match your brand
+    font-size: 3.5rem;
+    color: white;
+    line-height: 1.2;
+
+    margin-bottom: 0;
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    color: white;
+    line-height: 1.6;
+
+    @media (max-width: 768px) {
+      font-size: 1.125rem;
+    }
+  }
+}
+// Hero end //
+
+.title {
+  font-size: 56px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 22px;
+}
+
+.description {
+  font: 18px;
+}
+
+.btn {
+  color: white;
+  background-color: #000;
+  border-radius: 0;
+  padding: 6px 30px;
+}
+
+.section {
+  height: 635px;
+
+  &__img {
+    &--conference {
+      padding: 120px 0;
+      position: relative; // Added for overlay positioning
+      &::before {
+        // Added overlay
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.38);
+        z-index: 1;
+      }
+
+      // Move background properties to a pseudo-element
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("../img/sec1.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 0;
+      }
+    }
+    &--awards {
+      padding: 120px 0;
+      position: relative; // Added for overlay positioning
+      height: 50vh;
+      &::before {
+        // Added overlay
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.38);
+        z-index: 1;
+      }
+
+      // Move background properties to a pseudo-element
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("../img/sec2.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 0;
+      }
+    }
+  }
+
+  &__text {
+    padding: 20px 50px;
+  }
+}
+
+// Footer start //
+footer {
+  background-color: $secondary-color;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+// Footer start //
