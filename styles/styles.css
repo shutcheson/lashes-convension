@@ -1,6 +1,6 @@
 body {
   font-family: "Arial", sans-serif;
-  color: #212529;
+  color: #000000;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -11,10 +11,10 @@ body {
   color: #343a40;
 }
 .navbar .nav-link {
-  color: #212529;
+  color: #000000;
 }
 .navbar .nav-link:hover {
-  color: #007bff;
+  color: #8a8a8a;
 }
 
 .hero {
@@ -65,9 +65,13 @@ body {
   background-color: #000;
   border-radius: 0;
   padding: 6px 30px;
+  transition: all 0.32s ease-in-out;
 }
 .btn:hover {
   border: 1px solid black;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
 }
 
 .section__img--conference {
@@ -156,7 +160,7 @@ body {
   z-index: 0;
 }
 .section__text {
-  padding: 20px 50px;
+  padding: 20px 80px;
 }
 
 .creative-art {

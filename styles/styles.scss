@@ -1,11 +1,13 @@
 // Variables for colours and fonts
 $primary-color: #007bff;
 $secondary-color: #343a40;
-$text-color: #212529;
+$text-primary: #000000;
+$text-secondary: #212121;
+$text-hover: #8a8a8a;
 
 body {
   font-family: "Arial", sans-serif;
-  color: $text-color;
+  color: $text-primary;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -18,9 +20,9 @@ body {
     color: $secondary-color;
   }
   .nav-link {
-    color: $text-color;
+    color: $text-primary;
     &:hover {
-      color: $primary-color;
+      color: $text-hover;
     }
   }
 }
@@ -78,9 +80,13 @@ body {
   background-color: #000;
   border-radius: 0;
   padding: 6px 30px;
+  transition: all 0.32s ease-in-out;
 
   &:hover {
     border: 1px solid black;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
   }
 }
 
@@ -183,7 +189,7 @@ body {
   }
 
   &__text {
-    padding: 20px 50px;
+    padding: 20px 80px;
   }
 }
 
