@@ -21,10 +21,10 @@ body {
   padding: 120px 0;
   background-image: url("../img/hero-img.webp");
   height: 60vh;
-  object-fit: fill;
+  background-size: cover;
 }
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   color: white;
   line-height: 1.2;
   margin-bottom: 0;
@@ -36,9 +36,10 @@ body {
   }
 }
 .hero .lead {
-  font-size: 1.25rem;
+  font-size: 18px;
   color: white;
   line-height: 1.6;
+  padding-bottom: 20px;
 }
 @media (max-width: 768px) {
   .hero .lead {
@@ -56,7 +57,7 @@ body {
 }
 
 .description {
-  font: 18px;
+  font-size: 18px;
 }
 
 .btn {
@@ -65,11 +66,12 @@ body {
   border-radius: 0;
   padding: 6px 30px;
 }
-
-.section {
-  height: 635px;
+.btn:hover {
+  border: 1px solid black;
 }
+
 .section__img--conference {
+  height: 550px !important;
   padding: 120px 0;
   position: relative;
 }
@@ -97,6 +99,7 @@ body {
   z-index: 0;
 }
 .section__img--awards {
+  height: 635px !important;
   padding: 120px 0;
   position: relative;
   height: 50vh;
@@ -124,8 +127,43 @@ body {
   background-repeat: no-repeat;
   z-index: 0;
 }
+.section__img--conference {
+  padding: 120px 0;
+  position: relative;
+  height: 50vh;
+}
+.section__img--conference::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.38);
+  z-index: 1;
+}
+.section__img--conference::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/sec1.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
 .section__text {
   padding: 20px 50px;
+}
+
+.creative-art {
+  color: white;
+  height: auto;
+  padding-top: 60px;
+  background-image: url("../img/sec3.webp");
 }
 
 footer {

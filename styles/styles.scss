@@ -31,11 +31,11 @@ body {
   padding: 120px 0;
   background-image: url("../img/hero-img.webp");
   height: 60vh;
-  object-fit: fill;
+  background-size: cover;
 
   h1 {
     // Adjust these values to match your brand
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     color: white;
     line-height: 1.2;
 
@@ -48,9 +48,10 @@ body {
   }
 
   .lead {
-    font-size: 1.25rem;
+    font-size: 18px;
     color: white;
     line-height: 1.6;
+    padding-bottom: 20px;
 
     @media (max-width: 768px) {
       font-size: 1.125rem;
@@ -69,7 +70,7 @@ body {
 }
 
 .description {
-  font: 18px;
+  font-size: 18px;
 }
 
 .btn {
@@ -77,13 +78,16 @@ body {
   background-color: #000;
   border-radius: 0;
   padding: 6px 30px;
+
+  &:hover {
+    border: 1px solid black;
+  }
 }
 
 .section {
-  height: 635px;
-
   &__img {
     &--conference {
+      height: 550px !important;
       padding: 120px 0;
       position: relative; // Added for overlay positioning
       &::before {
@@ -114,6 +118,7 @@ body {
       }
     }
     &--awards {
+      height: 635px !important;
       padding: 120px 0;
       position: relative; // Added for overlay positioning
       height: 50vh;
@@ -144,11 +149,49 @@ body {
         z-index: 0;
       }
     }
+    &--conference {
+      padding: 120px 0;
+      position: relative; // Added for overlay positioning
+      height: 50vh;
+      &::before {
+        // Added overlay
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.38);
+        z-index: 1;
+      }
+
+      // Move background properties to a pseudo-element
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("../img/sec1.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 0;
+      }
+    }
   }
 
   &__text {
     padding: 20px 50px;
   }
+}
+
+.creative-art {
+  color: white;
+  height: auto;
+  padding-top: 60px;
+  background-image: url("../img/sec3.webp");
 }
 
 // Footer start //
